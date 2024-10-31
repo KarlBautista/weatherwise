@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: hsl(39, 100%, 95%);
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    width: 100vw; /* Set width to viewport width */
+    max-width: 100%; /* Prevent exceeding the viewport */
+  
+}
+
+header {
+    
+    font-family: "Lobster";
+    font-style: italic;
+    background-color: hsl(39, 100%, 55%);
+    color: white;
+    width: 100%;
+    padding: 5px 0;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    max-width: 100%;
+    transition: ease-in-out 1s;
+
+}
+
+
+.weatherForm{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.cityInput{
+    font-size: 2rem;
+    border-radius: 10px;
+    padding: 10px;
+    border: 2px solid hsl(0, 0%, 0%, .3);
+
+}
+
+.cityInput:focus{
+    outline: none;
+    border: 2px solid hsl(39, 100%, 55%);
+}
+
+button{
+    font-size: 1.5rem;
+    border: none;
+    background-color: orange;
+    color: white;
+    border-radius: 10px;
+    padding: 5px 25px;
+    margin-left: 15px;
+
+}
+
+button:hover{
+    background-color: hsl(39, 100%, 55%);
+    cursor: pointer;
+}
+
+button:active{
+    background-color: hsl(39, 100%, 65%);
+}
+.card *{
+    margin: 0;
+}
+.card{
+    animation: exampleAnimation 1s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(180deg, hsl(210, 100%, 75%), hsl(40, 100%, 75%));
+    padding: 50px;
+    margin-top: 25px;
+    color: hsl(0, 0%, 0%, .75);
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px hsl(0, 0%, 0%, .3);
+    width: 500px;
+    transition: ease-in-out 1 s;
+    
+}
+
+
+h1{
+    font-size: 5rem;
+    margin-bottom: 20px;
+   
+}
+
+.tempDisplay{
+    font-size: 3rem;
+    font-weight: bold;
+    margin-top: 50px;
+    
+
+}
+
+.humidityDisplay{
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 30px;
+   
+}
+
+.descDisplay{
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 30px;
+  
+}
+
+.weatherEmojiDisplay{
+    font-size: 10rem;
+   
+  
+}
+
+.errorDisplay{
+    font-size: 2rem;
+   font-weight: bold;
+    margin-top: 30px;
+}
+#map {
+    width: 50%;
+    height: 300px;
+    margin-top: 20px;
+
+}
+
+#footer{
+    color: hsl(39, 100%, 80%);
+}
+
+@keyframes exampleAnimation {
+    from {
+        transform: translateY(0); /* Start position */
+        opacity: 0; /* Start with opacity 0 */
+    }
+    to {
+        transform: translateY(0); /* End position */
+        opacity: 1; /* End with full opacity */
+    }
+}
+
+@media (max-width: 430px) {
+  
+ 
+    h1 {
+        font-size: 3rem; /* Reduced font size for smaller screens */
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .tempDisplay,
+    .humidityDisplay,
+    .descDisplay,
+    .errorDisplay {
+        font-size: 2rem; /* Unified font size for all displays */
+        text-align: center;
+    }
+
+    .weatherEmojiDisplay {
+        font-size: 5rem; /* Adjusted emoji size */
+        text-align: center;
+    }
+
+    .card {
+        width: 80%; /* Responsive card width */
+        max-width: none; /* Removed max-width for better flexibility */
+    }
+
+    .cityInput {
+        font-size: 1rem; /* Smaller font size */
+        padding: 5px;
+        width: 60%; /* Adjusted width for better fit */
+    }
+
+    button {
+        font-size: 0.8rem; /* Slightly larger font for buttons */
+        padding: 5px 15px;
+        margin: 5px;
+    }
+
+    #map {
+        width: 100%; /* Full width for map */
+        height: 100px; /* Adjusted height for better visibility */
+    }
+
+    .weatherForm {
+        justify-content: center;
+        align-items: center; /* Center align items */
+    }
+}
+
+
+@media (max-width: 360px) {
+    
+   
+    h1 {
+        font-size: 3rem; /* Reduced font size for smaller screens */
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .tempDisplay,
+    .humidityDisplay,
+    .descDisplay,
+    .errorDisplay {
+        font-size: 2rem; /* Unified font size for all displays */
+        text-align: center;
+    }
+
+    .weatherEmojiDisplay {
+        font-size: 5rem; /* Adjusted emoji size */
+        text-align: center;
+    }
+
+    .card {
+        width: 80%; /* Responsive card width */
+        max-width: none; /* Removed max-width for better flexibility */
+    }
+
+    .cityInput {
+        font-size: 1rem; /* Smaller font size */
+        padding: 5px;
+        width: 60%; /* Adjusted width for better fit */
+    }
+
+    button {
+        font-size: 0.8rem; /* Slightly larger font for buttons */
+        padding: 5px 15px;
+        margin: 5px;
+    }
+
+    #map {
+        width: 100%; /* Full width for map */
+        height: 100px; /* Adjusted height for better visibility */
+    }
+
+    .weatherForm {
+        justify-content: center;
+        align-items: center; /* Center align items */
+    }
+}
+
